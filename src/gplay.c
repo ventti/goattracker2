@@ -103,12 +103,9 @@ void initsongpos(int num, int mode, int pattpos)
 
 void stopsong(void)
 {
-  if (songinit != PLAY_STOPPED)
-  {
-    sound_suspend();
-    songinit = PLAY_STOP;
-    sound_flush();
-  }
+  sound_suspend();
+  songinit = PLAY_STOP;
+  sound_flush();
 }
 
 void rewindsong(void)
